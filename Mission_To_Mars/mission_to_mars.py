@@ -1,22 +1,16 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[66]:
-
-
 #Dependencies
 import os 
 import pandas as pd
 import numpy as py
 import pymongo
 import requests
+import time
+import json
+from selenium import webdriver
+from flask import Flask, render_template
 from splinter import Broweser
 from bs4 import BeautifulSoup as bs
 from webdriver_manager.chrome import ChromeDriverManager
-
-
-# In[20]:
-
 
 # URL of page to be scrapped
 url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
